@@ -396,6 +396,7 @@ function OpenShopMenu()
 			table.insert(LastVehicles, vehicle)
 			TaskWarpPedIntoVehicle(playerPed, vehicle, -1)
 			FreezeEntityPosition(vehicle, true)
+			SetModelAsNoLongerNeeded(vehicleData.model)
 		end)
 	end)
 
@@ -406,6 +407,7 @@ function OpenShopMenu()
 		table.insert(LastVehicles, vehicle)
 		TaskWarpPedIntoVehicle(playerPed, vehicle, -1)
 		FreezeEntityPosition(vehicle, true)
+		SetModelAsNoLongerNeeded(firstVehicleData.model)
 	end)
 
 end
